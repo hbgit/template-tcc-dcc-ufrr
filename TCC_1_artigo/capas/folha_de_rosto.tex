@@ -1,0 +1,41 @@
+% Folha de rosto
+%\newpage
+\begin{titlepage}
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[opacity=0.1,inner sep=0pt] at (current page.center){
+            \includegraphics[width=0.9\paperwidth]{estilo/dcc-logo.png}
+        };
+    \end{tikzpicture}
+    \begin{center}
+        % Título em negrito no topo
+        {\bfseries\LARGE TÍTULO DO TRABALHO}\\[4cm]
+
+        % Nome do discente
+        {\Large Nome do Discente}\\[4cm]
+
+        % Texto com recuo à direita
+        \begin{flushright}
+            \parbox{9cm}{\setlength{\parindent}{0pt}
+            Trabalho de Conclusão de Curso apresentado ao curso de Bacharelado em Ciência da Computação do Departamento de Ciência da Computação da Universidade Federal de Roraima, em cumprimento às exigências legais como requisito parcial à obtenção do título Bacharel em Ciência da Computação.
+            }
+        \end{flushright}
+
+        \begin{flushright}
+            \parbox{9cm}{\setlength{\parindent}{0pt}
+            \textbf{Orientador:} Prof. Título. Nome Completo.
+            }
+        \end{flushright}
+
+        \begin{flushright}
+            \parbox{9cm}{\setlength{\parindent}{0pt}
+            \textbf{Coorientador:} Prof. Título. Nome Completo.
+            }
+        \end{flushright}
+
+        \vfill
+
+        % Data ao final da página
+        {\large Boa Vista - RR\\
+        Maio de 2025}
+    \end{center}
+\end{titlepage}
