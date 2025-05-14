@@ -8,6 +8,7 @@
 \usepackage[brazil]{babel}
 % para anotações no período de revisões
 \usepackage{todonotes}
+\usepackage{fancyhdr}
 %\usepackage[latin1]{inputenc}  
 
      
@@ -32,12 +33,26 @@
   jomi@inf.furb.br}
 }
 
+
+% Númeração das páginas
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+
 \begin{document} 
 
 \include{capas/capa}
 \include{capas/folha_de_rosto}
 \include{capas/agradecimentos}
 
+
+% Sumário
+%\clearpage
+\renewcommand{\contentsname}{\centering \bfseries SUMÁRIO}
+\tableofcontents
+\thispagestyle{empty}
 
 \clearpage
 \pagenumbering{arabic}  % reinicia a contagem em números 1, 2, 3...
