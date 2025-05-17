@@ -8,10 +8,18 @@
     \end{tikzpicture}
     \begin{center}
         % Título em negrito no topo
-        {\bfseries\LARGE TÍTULO DO TRABALHO}\\[4cm]
+        {\bfseries\LARGE 
+            \makeatletter
+            \@title
+            \makeatother
+        }\\[4cm]
 
         % Nome do discente
-        {\Large Nome do Discente}\\[4cm]
+        {\Large 
+            \makeatletter
+            \@author
+            \makeatother
+        }\\[4cm]
 
         % Texto com recuo à direita
         \begin{flushright}

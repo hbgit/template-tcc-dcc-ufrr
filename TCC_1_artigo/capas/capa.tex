@@ -19,10 +19,18 @@
         }
 
         % Nome do aluno
-        {\bfseries\Large Nome do Aluno}\\[1.5cm]
+        {\bfseries\Large 
+            \makeatletter
+            \@author
+            \makeatother
+        }\\[1.5cm]
 
         % Título do trabalho
-        {\bfseries\LARGE Título do Trabalho}\\[3.5cm]
+        {\bfseries\LARGE 
+            \makeatletter
+            \@title
+            \makeatother
+        }\\[3.5cm]
 
         % Data
         {\large Boa Vista - RR\\
