@@ -199,3 +199,15 @@
 		\makeatother%
 	}%
 }%
+
+% --------------------
+% new commands  
+\newcommand{\orientador}[1]{\def\@orientador{#1}}
+\newcommand{\getorientador}{\@orientador}
+ 
+\newcommand{\coorientador}[1]{\def\@coorientador{#1}}
+\newcommand{\getcoorientador}{\@coorientador}
+\newcommand{\ifcoorientadordefined}[1]{%
+  \ifthenelse{\equal{\@coorientador}{}}{}%
+  {#1}%
+}

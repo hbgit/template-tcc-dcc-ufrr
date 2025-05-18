@@ -30,15 +30,17 @@
 
         \begin{flushright}
             \parbox{9cm}{\setlength{\parindent}{0pt}
-            \textbf{Orientador:} Prof. Título. Nome Completo.
+            \textbf{Orientador:} \getorientador.
             }
         \end{flushright}
-
-        \begin{flushright}
-            \parbox{9cm}{\setlength{\parindent}{0pt}
-            \textbf{Coorientador:} Prof. Título. Nome Completo.
-            }
-        \end{flushright}
+        
+        \ifcoorientadordefined{
+            \begin{flushright}
+                \parbox{9cm}{\setlength{\parindent}{0pt}
+                \textbf{Coorientador:} \getcoorientador.
+                }
+            \end{flushright}
+        }
 
         \vfill
 
