@@ -16,9 +16,20 @@
 \usepackage{ifthen}
 
 
+% --------------------------------------
+% Definições de formatação
+% Númeração das páginas
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
 
 \sloppy
 
+% --------------------------------------
+% Definições de informações do TCC
+% --------------------------------------
 \title{TÍTULO DO TRABALHO}
 
 \author{NOME DO DISCENTE} %\inst{1}
@@ -36,51 +47,44 @@
   Boa Vista -- RR -- Brasil  
   \email{\{aluno\}@ufrr.br}
 }
+% --------------------------------------
 
 
-% Númeração das páginas
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[R]{\thepage}
-\renewcommand{\headrulewidth}{0pt}
-
-
+% --------------------------------------
+% Início do documento
+% --------------------------------------
 \begin{document} 
 
+% Não é necessário alterar
 \include{capas/capa}
 \include{capas/folha_de_rosto}
+
+% Alterar texto ou suprimir
 \include{capas/agradecimentos}
 
 
 % Sumário
-%\clearpage
 \renewcommand{\contentsname}{\centering \bfseries SUMÁRIO}
 \tableofcontents
 \thispagestyle{empty}
 
 \clearpage
-\pagenumbering{arabic}  % reinicia a contagem em números 1, 2, 3...
+\pagenumbering{arabic}
 
 
 \maketitle
 
-\begin{abstract}
-  This meta-paper describes the style to be used in articles and short papers
-  for SBC conferences. For papers in English, you should add just an abstract
-  while for the papers in Portuguese, we also ask for an abstract in
-  Portuguese (``resumo''). In both cases, abstracts should not have more than
-  10 lines and must be in the first page of the paper.
-\end{abstract}
-     
+
 \begin{resumo} 
-  Este meta-artigo descreve o estilo a ser usado na confecção de artigos e
-  resumos de artigos para publicação nos anais das conferências organizadas
-  pela SBC. É solicitada a escrita de resumo e abstract apenas para os artigos
-  escritos em português. Artigos em inglês deverão apresentar apenas abstract.
-  Nos dois casos, o autor deve tomar cuidado para que o resumo (e o abstract)
-  não ultrapassem 10 linhas cada, sendo que ambos devem estar na primeira
-  página do artigo.
+  \textcolor{red}{Comece com uma sentença apresentando o objetivo do estudo. Depois descreva o método. Passe para uma breve descrição de resultados, indicando, então, a conclusão do seu estudo. Finalize com uma frase que pode, por exemplo, convidar a comunidade científica para realizar mais estudos semelhantes ao seu ou que indique a contribuição do seu trabalho. O seu resumo deve ter, no máximo, 150 palavras ou 10 linhas. O mesmo vale para o abstract. Importante: em um resumo, tipicamente, não fazemos citações. Além disso, não se deve inserir fórmulas, equações, diagramas ou símbolos.}
 \end{resumo}
+
+% Resumo em inglês
+\begin{abstract}
+  \textcolor{red}{Dica para a produção de um resumo em inglês: traduza o texto em português com a ajuda do Google Tradutor. Depois use uma versão gratuita do Grammarly para avaliar a qualidade do texto. Aceite as sugestões desse software.}
+\end{abstract}
+
+\keywords{Word 1, Word 2, Word 3}
 
 
 \section{General Information}
