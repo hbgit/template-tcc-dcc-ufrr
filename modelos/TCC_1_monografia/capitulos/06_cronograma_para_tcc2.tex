@@ -1,0 +1,80 @@
+		
+% - - -
+% Capítulo 6
+% - - -
+\chapter{Cronograma de execução para o TCC $2$}
+\label{chap:cronograma}
+
+\todo[inline]{\textbf{NOTA}: Deve-se apresentar e descrever o cronograma proposto para a execução do TCC 2. Segue um texto de introdução.}
+
+Neste capitulo é apresentado o cronograma proposto para as próximas etapas do trabalho de conclusão de curso, bem como, a descrição das atividades.
+
+\section{Metas e Atividades}
+\label{sec:ativ}
+
+\todo[inline]{\textbf{NOTA}: Deve-se listar as atividades e metas que irão compor o cronograma para o TCC 2. Segue um \textbf{exemplo}.}
+	
+As atividades propostas para a continuação deste trabalho são apresentadas a seguir. 
+
+\begin{enumerate}
+  \item \textbf{Revisão da literatura sobre invariantes de memória:} Invariantes de memória adicionam condições de pré e pós execução de operações sobre memória, sendo importante para 
+  este trabalho no que concerne a geração de \textit{witness}; 
+  %
+  \item \textbf{Aprimoramento do rastreamento de memória:} Comparar o rastreamento memória atual em outros modelos de memória, exemplo, o de precisão de \textit{bit} utilizado pelo VALGRING;
+  %
+  \item \textbf{Definição formal das propriedades de memória utilizado na verificação:} Criação de regras lógicas (baseada na lógica de inferência) para as propriedades verificadas. 
+  %
+  \item \textbf{Aplicação de um \textit{slicer} de código para o Map2Check:} No modelo atual, a instrumentação do Klee pode gerar muitos casos e facilmente gerar um número excessivo de estados, assim será estudo como utilizar um \textit{slicer} pra resolver esse problema.
+  %
+  \item \textbf{Adicionar um \textit{bounded model checker} no método:} Com o uso de BMC será possível gerar outras propriedades de segurança de memória de forma mais otimizada, devido a aplicação de outras técnicas como \textit{Lazy Abstraction} \cite{Cordeiro_ecs_2011}.
+  %
+  \item \textbf{Tradução das propriedades do \textit{bounded model checker}:} É necessário fazer com que o Map2Check seja compatível com a propriedades geradas pelo BMC, logo serão traduzidas as propriedades.
+  %
+  \item \textbf{Avaliação experimental das novas propriedades suportadas pelo método:} Testes empíricos sobre as novas funcionalidades.
+  %
+  \item \textbf{Realização de experimentos com \textit{benchmarks} públicos de programas escritos em C:} Com esses experimentos podemos verificar a eficácia real do método.
+  %
+  \item \textbf{Finalização da monografia:} Escrita sobre tudo o que foi desenvolvido e estudado no trabalho.
+  %
+  \item \textbf{Apresentação final:} Defesa do trabalho de conclusão de curso.
+\end{enumerate}
+	
+\section{Cronograma}
+
+\todo[inline]{\textbf{NOTA}: Deve-se apresentar uma tabela contendo o cronograma proposto para a execução das próximas etapas do TCC. Segue um \textbf{exemplo}.}
+
+A \autoref{tab:cronograma} apresenta o cronograma contendo as atividades apresentadas na Seção~\ref{sec:ativ}.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Cronograma de atividades}
+  \label{tab:cronograma}
+  \begin{tabularx}{\textwidth}{|X|c|c|c|c|c|}
+    \hline
+    \textbf{Atividade} & \textbf{Agosto} & \textbf{Setembro} & \textbf{Outubro} & \textbf{Novembro} & \textbf{Dezembro} \\
+    \hline
+    Revisão da literatura sobre invariantes de memória & \(\times\) & & & & \\
+    \hline
+    Aprimoramento do rastreamento de memória & \(\times\) & \(\times\)  &  & & \\
+    \hline
+    Definição formal das propriedades de memória utilizado na verificação & & \(\times\) & \(\times\) & \(\times\) & \\
+    \hline
+    Aplicação de um \textit{slicer} de código para o Map2Check & \(\times\) & \(\times\) & & &  \\
+    \hline
+    Adicionar um \textit{bounded model checker} no método & & & \(\times\) & &  \\
+    \hline
+    Tradução das propriedades do \textit{bounded model checker} & & & \(\times\) & \(\times\) &  \\
+    \hline
+    Avaliação experimental das novas propriedades suportadas pelo método & & & \(\times\) & \(\times\) &  \\
+    \hline
+    Realização de experimentos com \textit{benchmarks} públicos de programas escritos em C & & & & \(\times\) &   \\
+    \hline
+    Finalização da monografia & & & & & \(\times\)  \\
+    \hline
+    Apresentação final & & & & & \(\times\)  \\
+    \hline
+  \end{tabularx}
+  %\legend{Fonte: Autor.}
+      \legend{Fonte: Própria do autor.}
+\end{table}
+	

@@ -1,0 +1,459 @@
+% -----------------------------------------------------------------------------
+% -----------------------------------------------------------------------------
+%  Universidade Federal de Roraima
+%  Centro de Ciências e Tecnologias
+%  Departamento de Ciência da Computação
+%
+%  Adaptado do modelo do ICOMP/UFAM de:
+%  http://icomp.ufam.edu.br/site/phocadownload/template_latex_tcc_icomp.zip
+%     por Herbert.
+% -----------------------------------------------------------------------------
+% -----------------------------------------------------------------------------
+
+\documentclass[
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside,	
+	a4paper,				% tamanho do papel.
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,		% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,	% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,				% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+]{abntex2/abntex2} % Entre chaves vai o caminho para o arquivo .cls
+
+% ---
+% Pacotes básicos
+% ---
+\usepackage{bookman}				% Usa a fonte Bookman Old Style
+\usepackage[T1]{fontenc}			% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+
+%\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+
+\usepackage{multirow}
+\usepackage{scalefnt}
+\usepackage{bigstrut}
+
+% Image do DCC
+\usepackage[pages=some]{background}
+\backgroundsetup{
+  placement=bottom,
+  angle=0,
+  scale=0.5,
+  opacity=0.1,
+  vshift = +30ex,
+  hshift = +7ex,
+  contents= {\includegraphics[scale=1.0]{abntex2/logo-dcc.eps}}
+}
+
+\usepackage[alf,bibjustif,abnt-url-package=url,abnt-etal-cite=2,abnt-etal-list=0,abnt-emphasize=bf]{abntex2cite}	% Citações padrão ABNT
+
+\usepackage{todonotes} % para anotações no período de revisões
+
+% Pacotes para algoritmos/pseudo-código
+\usepackage{listings}
+\usepackage{subcaption}
+
+\lstset
+{ %Formatting for code in appendix
+    language=C,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    frame = single,
+    showstringspaces=false,
+    tabsize=2,
+    breaklines=true,
+    xleftmargin=10pt,
+    breakatwhitespace=false,
+    extendedchars=true,
+    literate={á}{{\'a}}1 
+             {ã}{{\~a}}1
+             {é}{{\'e}}1
+             {í}{{\'i}}1
+             {õ}{{\~o}}1
+             {ç}{{\c{c}}}1,
+}
+
+% PACOTES DE ALGORITMO
+
+\usepackage{algpseudocode,algorithm}
+% Declaracoes em Português
+
+\algrenewcommand\algorithmicend{\textbf{FIM}}
+\algrenewcommand\algorithmicdo{\textbf{FAÇA}}
+\algrenewcommand\algorithmicwhile{\textbf{ENQUANTO}}
+\algrenewcommand\algorithmicfor{\textbf{PARA}}
+\algrenewcommand\algorithmicforall{\textbf{PARA TODO}}
+\algrenewcommand\algorithmicif{\textbf{SE}}
+\algrenewcommand\algorithmicthen{\textbf{ENTÃO}}
+\algrenewcommand\algorithmicelse{\textbf{SENÃO}}
+\algrenewcommand\algorithmicreturn{\textbf{RETORNE}}
+\algrenewcommand\algorithmicfunction{\textbf{FUNÇÃO}}
+% New definitions
+\algnewcommand\algorithmicswitch{\textbf{ESCOLHA}}
+\algnewcommand\algorithmiccase{\textbf{CASO}}
+\algnewcommand\algorithmicassert{\texttt{assert}}
+\algnewcommand\Assert[1]{\State \algorithmicassert(#1)}%
+% New "environments"
+\algdef{SE}[SWITCH]{Switch}{EndSwitch}[1]{\algorithmicswitch\ #1\ \algorithmicdo}{\algorithmicend\ \algorithmicswitch}%
+\algdef{SE}[CASE]{Case}{EndCase}[1]{\algorithmiccase\ #1}{\algorithmicend\ \algorithmiccase}%
+\algtext*{EndSwitch}%
+\algtext*{EndCase}%
+
+
+% Rearranja os finais de cada estrutura
+\algrenewtext{EndWhile}{\algorithmicend\ \algorithmicwhile}
+\algrenewtext{EndFor}{\algorithmicend\ \algorithmicfor}
+\algrenewtext{EndIf}{\algorithmicend\ \algorithmicif}
+\algrenewtext{EndFunction}{\algorithmicend\ \algorithmicfunction}
+
+% O comando For, a seguir, retorna 'para #1 -- #2 até #3 faça'
+\algnewcommand\algorithmicto{\textbf{até}}
+\algrenewtext{For}[3]%
+{\algorithmicfor\ #1 $\gets$ #2 \algorithmicto\ #3 \algorithmicdo}
+
+\usepackage{lipsum} 
+
+
+%=========================================================
+\titulo{Título do Trabalho}
+\autor{Nome do aluno}
+\local{Boa Vista - RR}
+\data{Mês (por extenso) e ano}
+\orientador[Orientador(a)]{Nome e titulação do(a) professor(a) orientador(a)}
+\instituicao{%
+  Universidade Federal de Roraima
+  \par
+  Departamento de Ciência da Computação}
+\curso{%
+  Bacharelado em Ciência da Computação}
+\tipotrabalho{Monografia}
+% O preambulo deve conter o tipo do trabalho, o objetivo, 
+% o nome da instituição e a área de concentração 
+\preambulo{Monografia de Graduação apresentada ao Departamento de Ciência da Computação da Universidade Federal de Roraima como requisito parcial para a obtenção do grau de bacharel em Ciência da Computação.}
+
+% Informações do PDF
+\makeatletter
+\hypersetup{
+    	%pagebackref=true,
+	pdftitle={\@title}, 
+	pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+    pdfcreator={LaTeX with abnTeX2},
+	pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico},
+	bookmarksdepth=4
+}
+\makeatother
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+%\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+%\setbeforesecskip{3em}
+%\setbeforesubsecskip{3em}
+
+% ---
+% compila o indice
+% ---
+\makeindex
+
+% ---------------------------------------------------
+% INICIO DE DOCUMENTO
+% ---------------------------------------------------
+
+\begin{document}
+
+\todo[inline]{\textbf{NOTA}: Alterar os dados apresentados, e REMOVER TODOS os comentários deste modelo antes de enviar ao orientador(a).}
+
+\noindent
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+%\selectlanguage{english}
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+
+% ---
+% Capa
+% ---
+\imprimircapa
+% ---
+
+% ---
+% Folha de rosto
+% (o * indica que haverá a ficha bibliográfica)
+% ---
+\imprimirfolhaderosto*
+% ---
+
+
+% ---
+% Inserir folha de aprovação
+% ---
+
+% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
+% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
+% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
+% imagem da página assinada pela banca com o comando abaixo:
+%
+% \includepdf{folhadeaprovacao_final.pdf}
+%
+\begin{folhadedeclaracaoautoria}
+	\parindent=0pt
+	\setlength{\ABNTEXsignskip}{1.5cm}
+	
+	\begin{center}
+		\fontsize{12}{15}\selectfont
+		\vspace*{0.5cm}
+		\textbf{DECLARAÇÃO DE AUTORIA}
+		\vspace*{1cm}
+	\end{center}
+	
+	\todo[inline]{\textbf{NOTA}: Alterar os dados apresentados abaixo.}
+
+	Eu, <\textbf{Nome Completo}> (código de matricula <\textbf{Número de Matricula}>), autor da(o) monografia/TCC (Trabalho de Conclusão de Curso) sob o título <\textbf{Título da monografia}>, declaro que o trabalho em referência é de minha total autoria e de minha inteira responsabilidade o texto apresentado. Declaro, ainda, que as citações e paráfrases dos  autores estão indicadas com as respectivas obras e anos de publicação. Declaro, para os devidos fins que estou ciente:
+    \begin{itemize}\setlength\itemsep{.02em}
+        \item  dos Artigos 297 a 299 do Código Penal, Decreto-Lei n. 2.848 de 7 de dezembro de 1940;
+        %
+        \item  da Lei n. 9.610, de 19 de fevereiro de 1998, sobre os Direitos Autorais; e
+        %
+        \item  que plágio consiste na reprodução de obra alheia e submissão da mesma como trabalho próprio ou na inclusão, em trabalho próprio, de ideias, textos, tabelas ou ilustrações (quadros, figuras, gráficos, fotografias, retratos, lâminas, desenhos, organogramas, fluxogramas, plantas, mapas e outros) transcritos de obras de terceiros sem a devida e correta citação da referência.
+    \end{itemize}
+    
+    O corpo docente responsável pela avaliação deste trabalho poderá  não  aceitar o referido trabalho caso os pontos mencionados acima sejam descumpridos, por conseguinte, considerar-me reprovado.
+
+	\assinatura{\fontsize{12}{15}\selectfont Assinatura do acadêmico(a) \\ \imprimirlocal, data (por extenso).} 
+	\vspace{1cm}
+	
+	\vfill
+	
+	\BgThispage
+  
+\end{folhadedeclaracaoautoria}
+
+
+% ---
+% Inserir folha de aprovação
+% ---
+
+% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
+% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
+% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
+% imagem da página assinada pela banca com o comando abaixo:
+%
+% \includepdf{folhadeaprovacao_final.pdf}
+%
+\begin{folhadeaprovacao}
+	\parindent=0pt
+	\setlength{\ABNTEXsignskip}{1.5cm}
+	
+	\begin{center}
+		\fontsize{12}{15}\selectfont
+		\vspace*{0.2cm}
+		\textbf{FOLHA DE APROVAÇÃO}
+		\vspace*{0.2cm}
+	\end{center}
+	
+	\todo[inline]{\textbf{NOTA}: Alterar os dados apresentados abaixo.}
+
+	Monografia de Graduação sob o título \textbf{<Título da monografia>} apresentada por \textbf{<Nome do aluno>} e aceita pelo Departamento de Ciência da Computação da Universidade Federal de Roraima, sendo aprovada por todos os membros da banca examinadora abaixo especificada:
+
+	\assinatura{\fontsize{12}{15}\selectfont Titulação e nome do(a) orientador(a) \\ \fontsize{11}{15}\selectfont \imprimirorientadorRotulo~ \\ {\fontsize{10}{12}\selectfont Departamento \par Universidade}}
+	\vspace{0.5cm}
+	\assinatura{\fontsize{12}{15}\selectfont Titulação e nome do(a) membro da banca examinadora \\ \fontsize{11}{15}\selectfont Co-orientador(a), se houver \\ {\fontsize{10}{12}\selectfont Departamento \par Universidade}}
+	\vspace{0.5cm}
+	\assinatura{Titulação e nome do membro da banca examinadora \\ {\fontsize{10}{12}\selectfont Departamento \par Universidade}}
+	\vspace{0.5cm}
+	\assinatura{Titulação e nome do membro da banca examinadora \\ {\fontsize{10}{12}\selectfont Departamento \par Universidade}}
+	\vfill
+      
+	\begin{center}
+		\fontsize{12}{15}\selectfont
+		\vspace*{0.5cm}
+		\imprimirlocal, data de aprovação (por extenso).
+		\vspace*{0.5cm}
+	\end{center}
+	
+	\BgThispage
+  
+\end{folhadeaprovacao}
+
+% ---
+% Dedicatória
+% ---
+\begin{dedicatoria}
+   \vspace*{\fill}
+   \noindent
+   \leftskip=5cm
+
+   \todo[inline]{\textbf{NOTA}: Alterar os dados apresentados abaixo.}
+   Homenagem que o autor presta a uma ou mais pessoas.
+
+   \vspace{5cm}
+\end{dedicatoria}
+% ---
+
+% ---
+% Agradecimentos
+% ---
+\begin{agradecimentos}
+
+\todo[inline]{\textbf{NOTA}: Alterar o texto abaixo. Os agradecimentos são dirigidos àqueles que contribuíram de maneira relevante à elaboração do trabalho, sejam eles pessoas ou mesmo organizações.}
+
+\lipsum[1]
+
+\end{agradecimentos}
+
+% ---
+% Epígrafe
+% ---
+\begin{epigrafe}
+    \vspace*{\fill}
+	\begin{flushright}
+	    \todo[inline]{\textbf{NOTA}: Adicionar uma citação, uma frase que lhe inspire.}
+		
+		\textit{Água mole e pedra dura, tanto bate até que furo.}\\
+		Autor
+	\end{flushright}\vspace{4cm}
+\end{epigrafe}
+% ---
+
+% ---
+% RESUMOS
+% ---
+
+% resumo em português
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+\begin{resumo}
+    \todo[inline]{\textbf{LEMBRETE}: O resumo deve apresentar de forma concisa os pontos relevantes de um texto, fornecendo uma visão rápida e clara do conteúdo e das conclusões do trabalho. O texto, redigido na forma impessoal do verbo, é constituído de uma sequência de frases concisas e objetivas e não de uma simples enumeração de tópicos, não ultrapassando 500 palavras, seguido, logo abaixo, das palavras representativas do conteúdo do trabalho, isto é, palavras-chave e/ou descritores. Por exemplo, deve-se evitar, na redação do resumo, o uso de fórmulas, equações, diagramas e símbolos, optando-se, quando necessário, pela transcrição na forma extensa, além de não incluir citações bibliográficas.}
+    
+ \textit{Palavras-chave}: Palavra-chave 1, Palavra-chave 2, Palavra-chave 3.
+
+\end{resumo}
+
+% resumo em inglês
+\begin{resumo}[Abstract]
+ \begin{otherlanguage*}{english}
+ 
+   \todo[inline]{\textbf{NOTA}: O abstract é uma versão, no geral no idioma inglês, do seu resumo. Também deve atender as mesmas restrições do resumo.}
+   
+   This is the english abstract.
+
+   \vspace{\onelineskip}
+ 
+   \noindent 
+   \textit{Keywords}: Keyword 1, Keyword 2, Keyword 3.
+ \end{otherlanguage*}
+\end{resumo}
+
+% ---
+% inserir lista de figuras
+% ---
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de tabelas
+% ---
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de símbolos
+% ---
+\begin{simbolos}
+  \item[$ \lambda $] Lambda
+  \item[$ \omega $] Omega
+\end{simbolos}
+% ---
+
+% ---
+% inserir o sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% ---
+
+\textual
+
+\include{capitulos/01_introducao}
+\include{capitulos/02_fundamentos_teoricos}
+\include{capitulos/03_trabalhos_correlatos}
+\include{capitulos/04_metodo_solucao_proposta}
+\include{capitulos/05_planejamento_avaliacao}
+\include{capitulos/06_cronograma_para_tcc2}
+\include{capitulos/07_consideracoes_parciais}
+
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+\Spacing{1.5}
+% -----------------------------------------------------------------------------
+% Referencias Bibliograficas
+% -----------------------------------------------------------------------------
+\bibliography{referencias}
+
+% ----------------------------------------------------------
+% Apêndices
+% ----------------------------------------------------------
+
+% ---
+% Inicia os apêndices
+% ---
+\begin{apendicesenv}
+
+% ----------------------------------------------------------
+\chapter{Primeiro apêndice}
+% ----------------------------------------------------------
+\todo[inline]{\textbf{NOTA}: Os apêndices são textos ou documentos elaborados pelo autor, a fim de complementar sua argumentação, sem prejuízo da unidade nuclear do trabalho. Este capitulo deve ser usado de acordo com a necessidade e em discussão com o orientador(a).}
+
+
+
+\end{apendicesenv}
+
+% Anexos
+% ----------------------------------------------------------
+
+% ---
+% Inicia os anexos
+% ---
+\begin{anexosenv}
+
+% ---
+\chapter{Primeiro anexo.}
+% ---
+
+\todo[inline]{\textbf{NOTA}: Os anexos são textos ou documentos não elaborados pelo autor, que servem de fundamentação, comprovação e ilustração. Este capitulo deve ser usado de acordo com a necessidade e em discussão com o orientador(a).}
+
+
+\end{anexosenv}
+
+\end{document}

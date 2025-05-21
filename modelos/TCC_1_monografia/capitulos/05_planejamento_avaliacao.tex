@@ -1,0 +1,35 @@
+% - - -
+% Capítulo 5
+% - - -
+
+\chapter{Planejamento para Avaliação Experimental}
+\label{chap:planavaexp}
+
+\todo[inline]{\textbf{NOTA}: Deve-se adicionar um texto para introduzir o capitulo, segue um \textbf{exemplo}}
+
+Este capitulo descreve o planejamento para a execução da avaliação experimental da solução proposta, incluindo: o planejamento e projeto para a execução de um estudo experimental para avaliar o método proposto 
+neste trabalho.
+
+\section{Projeto da Avaliação Experimental}
+\label{sub:experimento}
+
+\todo[inline]{\textbf{NOTA}: Deve-se descrever o projeto para executar os testes para avaliar a solução proposta, incluindo o ambiente, elementos que serão utilizados, artefatos de entrada e saída, dados que serão coletados, e métricas para avaliação. Segue um \textbf{exemplo} abaixo.}
+
+Esta seção descreve o planeamento e concepção para a execução de um estudo empírico realizado com o objetivo de avaliar o método proposto para \textcolor{red}{XXXXX}. O estudo foi conduzido aplicando o método proposto sobre \textit{benchmarks} públicos de programas em C. Os experimentos foram conduzidos em um computador Intel Xeon CPU E5, 2.60GHz, 115GB RAM com Linux 3.13.0 - 35-generic x86\_64.
+
+\todo[inline]{\textbf{NOTA}: Deve-se também apresentar como será executado a avaliação e qual o seu objetivo de cada ação na avaliação. Neste momento você deve considerar as formas de testar (cenários importante) e como coletar os dados para sua avaliação. Segue um \textbf{exemplo}. } 
+
+Esta avaliação empírica tem como objetivo analisar a capacidade do método proposto, sobre benchmarks públicos de programas em C, para contribuir com a verificação executada pelo software $X$. Desta forma, nesta avaliação, investiga-se as seguintes questões de pesquisa (QP):
+
+\begin{itemize}
+    \item[QP1]: As ferramentas para a geração de invariantes são capazes de suportar as diferentes estruturas da linguagem de programação C?
+    %
+    \item[QP2]: As abordagens propostas para geração de dados de teste contribuem para a geração de invariantes?
+    %
+    \item[QP3]: As invariantes geradas contribuem na verificação executada pelo ESBMC?
+\end{itemize}
+
+Visando responder as questões de pesquisa, a execução deste experimento foi dividida em duas partes: Na \textbf{primeira parte}, considerou-se $16$ programas em ANSI-C dos seguintes \textit{benchmarks} públicos: $6$ programas do InvGen~\cite{SurveySymExec-CSUR:2018}, $7$ programas da categoria loops~\cite{Cordeiro_ecs_2011}. 
+%
+A execução da \textbf{segunda parte} dos experimentos consistiu em: (1) selecionar uma das ferramentas
+(aquela que apresente melhor suporte aos programas em C) para gerar as invariantes dos programas do benchmark do da categoria loops; e (3) executar a verificação dos programas com as invariantes usando o ESBMC (versão $1.25.2$) com k indução para efetuar uma comparação dos resultados.

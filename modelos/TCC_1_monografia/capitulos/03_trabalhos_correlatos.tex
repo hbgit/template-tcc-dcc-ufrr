@@ -1,0 +1,122 @@
+% ---
+% Capítulo 3
+% ---
+\chapter{Trabalhos Correlatos}
+\label{chap:trabcorrelatos}
+
+\todo[inline]{\textbf{NOTA}: Nesta parte faz-se a revisão de literatura sobre o assunto, resumindo-se os resultados de estudos feitos por outros autores, cujas obras citadas e consultadas devem constar nas referências. Abaixo segue alguns exemplos do uso de citações com Latex.}
+
+Como usar citações no Latex:
+\begin{itemize}
+    \item Adicionar a entrada no arquivo \texttt{referencias.bib}, que irá conter dados como: um identificador, nomes dos autores, titulo da publicação, local da publicação, ano e editora. Para exemplos, ver o repositório no  GitHub~\footnote{https://github.com/abntex/abntex2/blob/master/doc/latex/abntex2/examples/abntex2-modelo-references.bib} da abnt.
+    %
+    \item Uso de citação com nome, exemplo: Segundo \citeonline{SurveySymExec-CSUR:2018} bla bla ... Em latex seria: Segundo $\setminus$citeonline$\{$SurveySymExec-CSUR:2018$\}$ bla
+    %
+     \item Uso de citação em final de texto, exemplo: Execução simbólica é uma técnica para explorar e examinar os caminhos de um código pela validação de predicados~\cite{SurveySymExec-CSUR:2018}. Em latex a citação seria: $\setminus$cite$\{$SurveySymExec-CSUR:2018$\}$.
+    %
+    \item Exemplo de citação online~\cite{facebook50m}.
+\end{itemize}
+
+\section{Trabalho 1 (Colocar o Nome do Trabalho)}
+
+\todo[inline]{\textbf{NOTA}: Nesta seção deve-se apresentar uma análise do \textbf{primeiro} trabalho, que deve ser acadêmico e publicado. Sugeri-se o uso de trabalhos publicados em revistas, jornais, conferências e outros que apresentem como requisito uma revisão para publicação. Abaixo segue algumas recomendações a serem seguidas.}
+
+Recomendações de onde buscar trabalhos a serem utilizados no seu TCC:
+\begin{enumerate}
+    \item Pesquise no site google scholar em https://scholar.google.com/
+    %
+    \item Pesquise trabalhos publicados em bibliotecas digitais como: IEEE (www.ieee\allowbreak{}.org); Springer (www.springer.com); ACM (www.acm.org); periódicos CAPES (www.periodicos.capes.gov.br); e SCOPUS Elsevier (www.scopus.com), vale ressaltar que este último contém as publicações das anteriores.
+    %
+    \item Vale ressaltar que o acesso a algumas publicações/trabalhos nas bibliotecas enumeradas anteriormente podem requerer pagamento. Contudo, o acesso feito pela rede da UFRR possibilita um conta com acesso as bibliotecas digitais.
+    %
+    \item Para adicionar o trabalho as referências, recomenda-se o site dblp (https://dblp.org/) que já apresenta os detalhes do trabalho no formato bibtex.
+\end{enumerate}
+
+	
+\section{Trabalho 2 (Colocar o Nome do Trabalho)}
+
+\todo[inline]{\textbf{NOTA}: Nesta seção deve-se apresentar uma análise do \textbf{segundo} trabalho, que deve ser acadêmico e publicado. Sugeri-se o uso de trabalhos publicados em revistas, jornais, conferências e outros que apresentem como requisito uma revisão para publicação. Abaixo também é apresentado um exemplo do uso de tabelas.}
+
+Teste de uma tabela:
+
+\begin{table}[htbp]
+	\caption{Exemplo de tabela.}
+	\label{tabela-ssentido}
+	\begin{center}
+	\begin{tabular}{|c|c|}
+		\hline
+		Título Coluna & Título Coluna \\
+		1 & 2 \\
+		\hline
+		X & Y \\
+		\hline
+		X & W \\
+		\hline
+	\end{tabular}
+	\end{center}
+	    \legend{Fonte: Própria do autor.}
+\end{table}
+		
+\section{Trabalho 3 (Colocar o Nome do Trabalho)}
+
+\todo[inline]{\textbf{NOTA}: Nesta seção deve-se apresentar uma análise do \textbf{terceiro} trabalho, que deve ser acadêmico e publicado. No título acima, substituir ``Trabalho 3 (Colocar o Nome do Trabalho)'' pelo titulo do trabalho, exemplo, ``SMT-Based Bounded Model Checking for Embedded {ANSI-C} Software''. No texto não esqueça de citar o referido trabalho, exemplo, \textbf{No trabalho de \citeonline{Cordeiro_ecs_2011} é apresentado um software para ...}}
+
+
+
+\section{Trabalho 4 (Colocar o Nome do Trabalho)}
+
+\todo[inline]{\textbf{NOTA}: Nesta seção deve-se apresentar uma análise do \textbf{quarto} trabalho, que deve ser acadêmico e publicado.}
+
+\section{Correlações entre os trabalhos e a pesquisa}
+
+\todo[inline]{\textbf{NOTA}: Deve-se apresentar uma visão geral e comparativa dos trabalhos apresentados, bem como, cada trabalho apresentado pode contribuir com o seu trabalho. Sugere-se também apresentar uma tabela comparativa entre os trabalhos apresentados. Abaixo segue um exemplo:}
+
+A seguir analisamos as técnicas (ver Tabela~\ref{Table:TechByPapers}) 
+adotadas para a geração das invariantes de programa nos trabalhos apresentados anteriormente. Vale ressaltar que as técnicas identificadas foram:
+
+\begin{itemize}
+    \item \textbf{Análise de Predicados}. Analisando os métodos baseadas na análise de predicado, podemos observar que a análise de predicado fornece um apoio significativo na análise do programa para inferir propriedades sobre o comportamento do programa;
+    %
+    \item \textbf{Interpretação Abstratata}. É uma teoria da aproximação da semântica de linguagens de programação cuja aplicação principal é a análise estática;
+    %
+    \item \textbf{Lógica de Mill}. A lógica de Mill é adotada para caracterizar laços por meio de uma função que define o seu espaço de estados.
+    %
+    \item \textbf{\textit{Templates}}. Analisando as publicações, notamos que a adoção de \textit{templates} é importante para fornecer um suporte para guiar a inferência de invariantes de programas.
+\end{itemize}{}
+
+%\multicolumn{number cols}{align}{text} % align: l,c,r
+%\multirow{number rows}{width}{text}
+\begin{table}[htbp]
+  \centering  
+  \scalefont{0.9}
+  \caption{Classificação dos artigos por técnicas.}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    % header
+    % row 1 and 2
+    \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Artigos}}} & 
+    % row 1
+    \multicolumn{4}{c|}{\textbf{Técnicas}} \bigstrut\\
+    \cline{2-5} &
+    % row 2
+    \textbf{Predicados} & \textbf{Int. Abstrata} & \textbf{Log. Mill} & \textbf{\textit{Templates}} \bigstrut\\
+    \hline
+    % body table - row 3
+    Trabalho 1 & X &  &  &  \bigstrut\\
+    \hline
+    % body table - row 4
+    Trabalho 2 &  & X & X &  \bigstrut\\
+    \hline
+    % body table - row 5
+    Trabalho 3 & X & X &  & X \bigstrut\\
+    \hline
+    % body table - row 6
+    Trabalho 4 & X & X &  & X \bigstrut\\
+    \hline
+  \end{tabular}
+  \label{Table:TechByPapers}
+      \legend{Fonte: Própria do autor.}
+\end{table}%
+
+
+		
