@@ -1,12 +1,23 @@
+%------------------------------------------
+% Este é o estilo/template de formatação de 
+% TCC no formato de artigo do DCC/UFRR.
+% Este documento utiliza como base o modelo
+% de formatação da SBC (Sociedade Brasileira
+% de Computação). Disponivel em: 
+% https://www.sbc.org.br/wp-content/uploads/2024/07/modelosparapublicaodeartigos.zip
+%------------------------------------------
+
 \documentclass[12pt]{article}
 
+% --------------------------------------
+% Pacotes utilizados 
+% --------------------------------------
 \usepackage{estilo/sbc-template}
 \usepackage{tikz}
 \usepackage{transparent}
 \usepackage{graphicx,url}
 \usepackage[utf8]{inputenc}
 \usepackage[brazil]{babel}
-% para anotações no período de revisões
 \usepackage{todonotes}
 \usepackage{fancyhdr}
 \usepackage{multirow}
@@ -20,6 +31,10 @@
 \usepackage{bigstrut}
 \usepackage{array}
 
+
+% --------------------------------------
+% Configurações de formatação de código
+% --------------------------------------
 \lstset
 { %Formatting for code
     language=C,
@@ -45,6 +60,7 @@
 % --------------------------------------
 % Definições de formatação
 % Númeração das páginas
+% --------------------------------------
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[R]{\thepage}
@@ -58,7 +74,7 @@
 % --------------------------------------
 \title{TÍTULO DO TRABALHO}
 
-\author{NOME DO DISCENTE} %\inst{1}
+\author{NOME DO DISCENTE}
 
 \orientador{Prof. Título. Nome Completo}
 % Caso não tenha coorientador, deixar o campo vazio.
@@ -85,31 +101,40 @@
 \include{capas/capa}
 \include{capas/folha_de_rosto}
 
-% Alterar texto ou suprimir
+% Alterar texto ou suprimir o comando abaixo
 \include{capas/agradecimentos}
 
 
+% --------------------------------------
 % Sumário
+% --------------------------------------
 \renewcommand{\contentsname}{\centering \bfseries SUMÁRIO}
 \tableofcontents
 \thispagestyle{empty}
 
 \clearpage
 \pagenumbering{arabic}
-
-
 \maketitle
 
-
+% --------------------------------------
+% Resumo em português
+% --------------------------------------
 \begin{resumo} 
   \textcolor{red}{Comece com uma sentença apresentando o objetivo do estudo. Depois descreva o método. Passe para uma breve descrição de resultados, indicando, então, a conclusão do seu estudo. Finalize com uma frase que pode, por exemplo, convidar a comunidade científica para realizar mais estudos semelhantes ao seu ou que indique a contribuição do seu trabalho. O seu resumo deve ter, no máximo, 150 palavras ou 10 linhas. O mesmo vale para o abstract. Importante: em um resumo, tipicamente, não fazemos citações. Além disso, não se deve inserir fórmulas, equações, diagramas ou símbolos.}
 \end{resumo}
 
+
+% --------------------------------------
 % Resumo em inglês
+% --------------------------------------
 \begin{abstract}
   \textcolor{red}{Dica para a produção de um resumo em inglês: traduza o texto em português com a ajuda do Google Tradutor. Depois use uma versão gratuita do Grammarly para avaliar a qualidade do texto. Aceite as sugestões desse software.}
 \end{abstract}
 
+
+% --------------------------------------
+% Keywords do artigo
+% --------------------------------------
 \keywords{Word 1, Word 2, Word 3}
 
 
@@ -129,14 +154,20 @@
 %--------------------------------------
 \bibliography{referencias}
 
-%----------------------------
+
+%--------------------------------------
 % Apêndice
+%--------------------------------------
 \include{capas/capa-apendice}
 \include{secoes/apendice-1}
 
-% Anexo
+
+%--------------------------------------
+% Anexos
+%--------------------------------------
 \include{capas/capa-anexos}
 \include{secoes/anexo-1}
 \include{secoes/anexo-2}
+
 
 \end{document}
