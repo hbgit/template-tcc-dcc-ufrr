@@ -1,0 +1,177 @@
+%------------------------------------------
+% Este é o estilo/template de formatação de 
+% TCC 2 no formato de artigo do DCC/UFRR.
+% Este documento utiliza como base o modelo
+% de formatação da SBC (Sociedade Brasileira
+% de Computação). Disponivel em: 
+% https://www.sbc.org.br/wp-content/uploads/2024/07/modelosparapublicaodeartigos.zip
+%------------------------------------------
+
+\documentclass[12pt]{article}
+
+% --------------------------------------
+% Pacotes utilizados 
+% --------------------------------------
+\usepackage{estilo/sbc-template}
+\usepackage{tikz}
+\usepackage{transparent}
+\usepackage{graphicx,url}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{todonotes}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{scalefnt}
+\usepackage{float}
+\usepackage{datetime}
+\usepackage{ifthen}
+\usepackage[alf]{abntex2cite} 
+\usepackage{listings}
+\usepackage{subcaption}
+\usepackage{bigstrut}
+\usepackage{array}
+
+
+% --------------------------------------
+% Configurações de formatação de código
+% --------------------------------------
+\lstset
+{ %Formatting for code
+    language=C,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    frame = single,
+    showstringspaces=false,
+    tabsize=2,
+    breaklines=true,
+    xleftmargin=10pt,
+    breakatwhitespace=false,
+    extendedchars=true,
+    literate={á}{{\'a}}1 
+             {ã}{{\~a}}1
+             {é}{{\'e}}1
+             {í}{{\'i}}1
+             {õ}{{\~o}}1
+             {ç}{{\c{c}}}1,
+}
+
+
+% --------------------------------------
+% Definições de formatação
+% Númeração das páginas
+% --------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+
+\sloppy
+
+% --------------------------------------
+% Definições de informações do TCC
+% --------------------------------------
+\title{TÍTULO DO TRABALHO}
+
+\author{NOME DO DISCENTE}
+
+\orientador{Prof. Título. Nome Completo}
+% Caso não tenha coorientador, deixar o campo vazio.
+\coorientador{}
+% Caso tenha coorientador, descomentar linha abaixo.
+%\coorientador{Prof. Título. Nome Completo}
+
+\address{
+  Curso de Bacharelado em Ciência da Computação\\ 
+  Departamento de Ciência da Computação\\ 
+  Universidade Federal de Roraima (UFRR)\\ 
+  Boa Vista -- RR -- Brasil  
+  \email{\{aluno\}@ufrr.br}
+}
+
+% Caso não tenha agradecimentos, deixar o campo vazio.
+\agradecimento{
+  \todo[inline]{É opcional, mas é comum que se escreva esta seção de modo a reconhecer todos que contribuíram de modo relevante com a elaboração do TCC, sejam pessoas ou organizações. Exemplo: A todos os professores do curso que colaboraram e construíram bases sólidas no meu desenvolvimento e aprendizagem para o crescimento profissional. Seus nomes são inesquecíveis e por isso, dedico-lhes minha profunda admiração e respeito.}
+}
+% --------------------------------------
+
+
+% --------------------------------------
+% Início do documento
+% --------------------------------------
+\begin{document} 
+
+% Não é necessário alterar
+\include{capas/capa}
+\include{capas/folha_de_rosto}
+\ifagradecimentodefined{
+  \include{capas/agradecimentos}
+}
+
+% --------------------------------------
+% Sumário
+% --------------------------------------
+\renewcommand{\contentsname}{\centering \bfseries SUMÁRIO}
+\tableofcontents
+\thispagestyle{empty}
+
+\clearpage
+\pagenumbering{arabic}
+\maketitle
+
+% --------------------------------------
+% Resumo em português
+% --------------------------------------
+\begin{resumo} 
+  \textcolor{red}{Comece com uma sentença apresentando o objetivo do estudo. Depois descreva o método. Passe para uma breve descrição de resultados, indicando, então, a conclusão do seu estudo. Finalize com uma frase que pode, por exemplo, convidar a comunidade científica para realizar mais estudos semelhantes ao seu ou que indique a contribuição do seu trabalho. O seu resumo deve ter, no máximo, 150 palavras ou 10 linhas. O mesmo vale para o abstract. Importante: em um resumo, tipicamente, não fazemos citações. Além disso, não se deve inserir fórmulas, equações, diagramas ou símbolos.}
+\end{resumo}
+
+
+% --------------------------------------
+% Resumo em inglês
+% --------------------------------------
+\begin{abstract}
+  \textcolor{red}{Dica para a produção de um resumo em inglês: traduza o texto em português com a ajuda do Google Tradutor. Depois use uma versão gratuita do Grammarly para avaliar a qualidade do texto. Aceite as sugestões desse software.}
+\end{abstract}
+
+
+% --------------------------------------
+% Keywords do artigo
+% --------------------------------------
+\keywords{Word 1, Word 2, Word 3}
+
+
+%--------------------------------------
+% Seções do artigo
+%--------------------------------------
+\input{secoes/sec-introducao}
+\input{secoes/sec-fundamentos}
+\input{secoes/sec-trabalhos-re}
+\input{secoes/sec-solucao-pro}
+\input{secoes/sec-plan-experimentos}
+\input{secoes/sec-conclusao}
+
+
+%--------------------------------------
+% Referências
+%--------------------------------------
+\bibliography{referencias}
+
+
+%--------------------------------------
+% Apêndice
+%--------------------------------------
+\include{capas/capa-apendice}
+\include{secoes/apendice-1}
+
+
+%--------------------------------------
+% Anexos
+%--------------------------------------
+\include{capas/capa-anexos}
+\include{secoes/anexo-1}
+\include{secoes/anexo-2}
+
+
+\end{document}

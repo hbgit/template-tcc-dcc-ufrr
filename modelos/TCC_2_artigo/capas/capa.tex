@@ -1,0 +1,41 @@
+% Capa personalizada para UFRR
+\begin{titlepage}
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[opacity=0.1,inner sep=0pt] at (current page.center){
+            \includegraphics[width=0.9\paperwidth]{estilo/dcc-logo.png}
+        };
+    \end{tikzpicture} 
+
+    \begin{center}
+        % Imagem no topo (troque o nome do arquivo para o correto)
+        \includegraphics[width=0.2\textwidth]{estilo/ufrr-logo.png} %\\[2cm]
+
+        % Instituição
+        {\large
+        UNIVERSIDADE FEDERAL DE RORAIMA\\
+        CENTRO DE CIÊNCIAS E TECNOLOGIA\\
+        DEPARTAMENTO DE CIÊNCIA DA COMPUTAÇÃO\\
+        CURSO DE BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO\\[3cm]
+        }
+
+        % Nome do aluno
+        {\bfseries\Large 
+            \makeatletter
+            \@author
+            \makeatother
+        }\\[1.5cm]
+
+        % Título do trabalho
+        {\bfseries\LARGE 
+            \makeatletter
+            \@title
+            \makeatother
+        }
+
+        \vfill
+
+        % Data
+        {\large Boa Vista - RR\\
+        \today}
+    \end{center}
+\end{titlepage}
