@@ -220,4 +220,11 @@
   \vspace{0.5cm}
 }
 
+\newcommand{\agradecimento}[1]{\def\@agradecimento{#1}}
+\newcommand{\getagradecimento}{\@agradecimento}
+\newcommand{\ifagradecimentodefined}[1]{%
+  \ifthenelse{\equal{\@agradecimento}{}}{}%
+  {#1}%
+}
+
 

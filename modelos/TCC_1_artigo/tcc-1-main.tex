@@ -89,6 +89,11 @@
   Boa Vista -- RR -- Brasil  
   \email{\{aluno\}@ufrr.br}
 }
+
+% Caso não tenha agradecimentos, deixar o campo vazio.
+\agradecimento{
+  \todo[inline]{É opcional, mas é comum que se escreva esta seção de modo a reconhecer todos que contribuíram de modo relevante com a elaboração do TCC, sejam pessoas ou organizações. Exemplo: A todos os professores do curso que colaboraram e construíram bases sólidas no meu desenvolvimento e aprendizagem para o crescimento profissional. Seus nomes são inesquecíveis e por isso, dedico-lhes minha profunda admiração e respeito.}
+}
 % --------------------------------------
 
 
@@ -100,10 +105,9 @@
 % Não é necessário alterar
 \include{capas/capa}
 \include{capas/folha_de_rosto}
-
-% Alterar texto ou suprimir o comando abaixo
-\include{capas/agradecimentos}
-
+\ifagradecimentodefined{
+  \include{capas/agradecimentos}
+}
 
 % --------------------------------------
 % Sumário
