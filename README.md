@@ -18,6 +18,8 @@ Este modelo LaTeX foi desenvolvido para atender às diretrizes da RESOLUÇÃO CE
 Este modelo LaTeX foi desenvolvido para atender às diretrizes da RESOLUÇÃO CEPE/UFRR Nº 133, de 24 de março de 2025, em especial à Seção 3.1 ESQUEMA DO FORMATO MONOGRAFIA, com adaptações específicas estabelecidas pelo Departamento de Ciência da Computação (DCC).
 
 
-## TCC 2 - Artigo
+## [TCC 2 - Artigo](modelos/TCC_2_artigo/)
+Este modelo LaTeX foi desenvolvido para atender às diretrizes da RESOLUÇÃO CEPE/UFRR Nº 133, de 24 de março de 2025, em especial à Seção 3.2 (Formato Artigo), com adaptações específicas estabelecidas pelo Departamento de Ciência da Computação (DCC).
 
 ## TCC 2 - Monografia
+- TODO
