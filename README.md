@@ -10,16 +10,51 @@ De acordo com a Resolução no 011/2012-CEPE, a formatação final do TCC dever�
 
 **Observação**: Consulte sempre as normas vigentes e, se necessário, verifique junto ao DCC eventuais atualizações ou orientações complementares.
 
-## [TCC 1 - Artigo](modelos/TCC_1_artigo/)
+## Modelos disponíveis
+
+| Programa | Modelo | Arquivo principal |
+|---|---|---|
+| Bacharelado em Ciência da Computação | [TCC 1 - Artigo](modelos/Bacharelado-Comp/TCC_1_artigo/) | `tcc-1-main.tex` |
+| Bacharelado em Ciência da Computação | [TCC 1 - Monografia](modelos/Bacharelado-Comp/TCC_1_monografia/) | `dcc-modelo-tcc1.tex` |
+| Bacharelado em Ciência da Computação | [TCC 2 - Artigo](modelos/Bacharelado-Comp/TCC_2_artigo/) | `tcc-2-main.tex` |
+| Bacharelado em Ciência da Computação | TCC 2 - Monografia | *em desenvolvimento* |
+| PPCA (Pós-Graduação em Computação Aplicada) | [Qualificação](modelos/PPCA/qualificacao/) | `qualificacao-main.tex` |
+
+Cada modelo é independente: possui seus próprios arquivos de estilo, capas e seções, podendo ser baixado e utilizado separadamente.
+
+## Bacharelado em Ciência da Computação
+
+### [TCC 1 - Artigo](modelos/Bacharelado-Comp/TCC_1_artigo/)
 Este modelo LaTeX foi desenvolvido para atender às diretrizes da RESOLUÇÃO CEPE/UFRR Nº 133, de 24 de março de 2025, em especial à Seção 3.2 (Formato Artigo), com adaptações específicas estabelecidas pelo Departamento de Ciência da Computação (DCC).
 
+### [TCC 1 - Monografia](modelos/Bacharelado-Comp/TCC_1_monografia/)
+Este modelo LaTeX foi desenvolvido para atender às diretrizes da RESOLUÇÃO CEPE/UFRR Nº 133, de 24 de março de 2025, em especial à Seção 3.1 ESQUEMA DO FORMATO MONOGRAFIA, com adaptações específicas estabelecidas pelo Departamento de Ciência da Computação (DCC). Utiliza a classe [abnTeX2](https://www.abntex.net.br/), incluída no próprio diretório do modelo.
 
-## [TCC 1 - Monografia](modelos/TCC_1_monografia/)
-Este modelo LaTeX foi desenvolvido para atender às diretrizes da RESOLUÇÃO CEPE/UFRR Nº 133, de 24 de março de 2025, em especial à Seção 3.1 ESQUEMA DO FORMATO MONOGRAFIA, com adaptações específicas estabelecidas pelo Departamento de Ciência da Computação (DCC).
+### [TCC 2 - Artigo](modelos/Bacharelado-Comp/TCC_2_artigo/)
+Este modelo LaTeX foi desenvolvido para atender às diretrizes da RESOLUÇÃO CEPE/UFRR Nº 133, de 24 de março de 2025, em especial à Seção 3.2 (Formato Artigo), com adaptações específicas estabelecidas pelo Departamento de Ciência da Computação (DCC). Em relação ao TCC 1, inclui a ficha catalográfica, a ata de aprovação e a seção de avaliação/experimentos.
 
-
-## [TCC 2 - Artigo](modelos/TCC_2_artigo/)
-Este modelo LaTeX foi desenvolvido para atender às diretrizes da RESOLUÇÃO CEPE/UFRR Nº 133, de 24 de março de 2025, em especial à Seção 3.2 (Formato Artigo), com adaptações específicas estabelecidas pelo Departamento de Ciência da Computação (DCC).
-
-## TCC 2 - Monografia
+### TCC 2 - Monografia
 - TODO
+
+## PPCA - Programa de Pós-Graduação em Computação Aplicada
+
+### [Qualificação](modelos/PPCA/qualificacao/)
+Modelo para o exame de qualificação do PPCA/UFRR, derivado do modelo de TCC 2 - Artigo, com capas e identidade visual do programa.
+
+## Como compilar
+
+Compile a partir do diretório do modelo desejado. Como as referências utilizam BibTeX (pacote `abntex2cite`), são necessárias múltiplas execuções:
+
+```bash
+cd modelos/Bacharelado-Comp/TCC_2_artigo
+pdflatex tcc-2-main
+bibtex tcc-2-main
+pdflatex tcc-2-main
+pdflatex tcc-2-main
+```
+
+Alternativamente, utilize `latexmk -pdf tcc-2-main.tex` ou importe o diretório do modelo no [Overleaf](https://www.overleaf.com/).
+
+## Contribuindo
+
+Contribuições são bem-vindas! Consulte o [Guia de Contribuição](CONTRIBUTING.md) e o [Código de Conduta](CODE_OF_CONDUCT.md).
