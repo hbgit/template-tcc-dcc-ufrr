@@ -1,44 +1,53 @@
 %------------------------------------------
-% Planejamento para Avaliação Experimental
+% Avaliação Experimental
 %------------------------------------------
 \section{Avaliação Experimental}
 \label{sec:plan-experimentos}
 
 
-\todo[inline]{\textbf{NOTA}: Deve-se adicionar um texto para introduzir o capitulo, segue um \textbf{exemplo}}
+\todo[inline]{\textbf{NOTA}: Deve-se adicionar um texto para introduzir a seção. No texto de qualificação, esta seção deve apresentar o planejamento completo da avaliação e, quando houver, os resultados preliminares já obtidos, permitindo que a banca avalie a viabilidade e o rigor da avaliação antes da sua execução final. Segue um \textbf{exemplo}.}
 
-Esta seção descreve o planejamento e resultados da execução da avaliação experimental da solução proposta, incluindo: o planejamento e projeto para a execução de um estudo experimental para avaliar o método proposto 
-neste trabalho.
+Esta seção descreve o planejamento da avaliação experimental da solução proposta, incluindo o projeto do estudo empírico que será executado para avaliá-la, bem como os resultados preliminares obtidos até o momento.
 
 
 \subsection{Projeto da Avaliação Experimental}
 \label{sub:experimento}
 
-\todo[inline]{\textbf{NOTA}: Deve-se descrever o projeto para executar os testes para avaliar a solução proposta, incluindo o ambiente, elementos que serão utilizados, artefatos de entrada e saída, dados que serão coletados, e métricas para avaliação. Segue um \textbf{exemplo} abaixo.}
+\todo[inline]{\textbf{NOTA}: Deve-se descrever o projeto da avaliação da solução proposta, incluindo o objetivo, o ambiente, os elementos utilizados, os artefatos de entrada e saída, os dados coletados e as métricas de avaliação. Recomenda-se estruturar o objetivo com o paradigma GQM (\textit{Goal-Question-Metric}), associando cada questão de pesquisa a métricas objetivas, e definir as \textit{baselines} com as quais a solução será comparada (por exemplo, os trabalhos relacionados ou a prática atual da organização). Por se tratar de um Mestrado Profissional em Computação Aplicada, a avaliação deve contemplar, sempre que possível, a validação no contexto real de aplicação, com usuários, dados ou processos da organização ou do setor beneficiado (por exemplo, estudo de caso, implantação piloto, avaliação de usabilidade ou de aceitação da tecnologia). Caso a avaliação envolva seres humanos, informe a aprovação no Comitê de Ética em Pesquisa (Plataforma Brasil). Segue um \textbf{exemplo} abaixo.}
 
-\textcolor{red}{Esta seção descreve o planeamento e concepção para a execução de um estudo empírico realizado com o objetivo de avaliar a solução proposta para \textcolor{red}{XXXXX}. O estudo será conduzido aplicando a solução proposta sobre \textit{benchmarks} públicos de programas em C. Os experimentos foram conduzidos em um computador Intel Xeon CPU E5, 2.60GHz, 115GB RAM com Linux 3.13.0 - 35-generic x86\_64.}
+\textcolor{red}{Esta seção descreve o planejamento e o projeto de um estudo empírico com o objetivo de avaliar a solução proposta para \textcolor{red}{XXXXX}. O estudo será conduzido aplicando a solução proposta sobre \textit{benchmarks} públicos de programas em C e sobre programas fornecidos pela organização parceira \textcolor{red}{XXXXX}. Os experimentos serão executados em um computador Intel Xeon CPU E5, 2.60GHz, 115GB RAM com Linux 3.13.0-35-generic x86\_64.}
 
-\todo[inline]{\textbf{NOTA}: Deve-se também apresentar como será executado a avaliação e qual o seu objetivo de cada ação na avaliação. Neste momento você deve considerar as formas de testar (cenários importante) e como coletar os dados para sua avaliação. Segue um \textbf{exemplo}. } 
+\todo[inline]{\textbf{NOTA}: Deve-se também apresentar como a avaliação será executada e qual o objetivo de cada ação. Neste momento você deve considerar os cenários de teste mais importantes e a forma de coleta e de análise dos dados, incluindo os testes estatísticos, quando aplicáveis. Segue um \textbf{exemplo}.}
 
-\textcolor{red}{Esta avaliação empírica tem como objetivo analisar a capacidade do método proposto, sobre benchmarks públicos de programas em C, para contribuir com a verificação executada pelo software $X$. Desta forma, nesta avaliação, investiga-se as seguintes questões de pesquisa (QP):
+\textcolor{red}{Esta avaliação empírica tem como objetivo analisar a capacidade do método proposto, sobre \textit{benchmarks} públicos de programas em C, de contribuir com a verificação executada pelo software $X$. Desta forma, nesta avaliação, investigam-se as seguintes questões de pesquisa (QP):
 %
 \begin{itemize}
     \item[QP1]: As ferramentas para a geração de invariantes são capazes de suportar as diferentes estruturas da linguagem de programação C?
     %
     \item[QP2]: As abordagens propostas para geração de dados de teste contribuem para a geração de invariantes?
     %
-    \item[QP3]: As invariantes geradas contribuem na verificação executada pelo ESBMC?
+    \item[QP3]: As invariantes geradas contribuem para a verificação executada pelo ESBMC?
+    %
+    \item[QP4]: A solução proposta é aplicável ao processo de desenvolvimento da organização parceira, na percepção dos seus usuários?
 \end{itemize}}
 
 
-\todo[inline]{\textbf{NOTA}: Deve-se também apresentar também as etapas da experimentação.}
+\todo[inline]{\textbf{NOTA}: Deve-se também apresentar as etapas da experimentação e o cronograma de execução, indicando quais etapas já foram concluídas e quais serão realizadas até a defesa.}
 
 
-\subsection{Análise dos Resultados}
+\subsection{Resultados Preliminares}
 \label{sub:analise-resultados}
 
-\textcolor{red}{A função desta seção é apresentar os produtos e/ou dados obtidos após a execução da solução proposta, bem como a interpretação desses dados a partir da teoria, seguida pelo apontamento das respostas às perguntas de pesquisas. Tais respostas precisam ser comparadas com o conhecimento científico existente de modo que o leitor perceba em que medida se aproximam ou se distanciam do que já era conhecido. Por fim, aponte as limitações do estudo, que são procedimentos metodológicos não realizados e que limitam a confiabilidade e a generalidade das respostas às perguntas de pesquisa.}
+\todo[inline]{\textbf{NOTA}: No texto de qualificação, apresente os resultados preliminares obtidos até o momento (por exemplo, de um estudo piloto, de uma prova de conceito ou da execução parcial dos experimentos), deixando claro o seu caráter parcial. Caso ainda não haja resultados, descreva como os resultados serão analisados e discutidos. As orientações abaixo valem tanto para os resultados preliminares quanto para os resultados finais, a serem apresentados na dissertação.}
 
-\textcolor{red}{Lembre-se que discutir um resultado, geralmente, significa: 1. Comparar o seu dado ou resposta com a literatura descrita na seção de Trabalhos Relacionados, apontando se o resultado foi convergente ou divergente com outros dados observados na literatura; 2. Explicar o resultado com base na literatura descrita na seção de Fundamentação Teórica, o que significa dizer se o resultado era esperado ou não. E, quando isso não for possível, levantar hipóteses que expliquem o resultado; 3. Indicar as implicações do resultado para pesquisas futuras; 4. Descrever o que significa o resultado, esclarecendo para o leitor, por exemplo, se o dado é um bom indicador ou não em relação ao que está se tentando responder na pesquisa.}
+\textcolor{red}{A função desta seção é apresentar os produtos e/ou dados obtidos após a execução da solução proposta, bem como a interpretação desses dados a partir da teoria, seguida pelo apontamento das respostas às perguntas de pesquisa. Tais respostas precisam ser comparadas com o conhecimento científico existente, de modo que o leitor perceba em que medida se aproximam ou se distanciam do que já era conhecido. Por se tratar de um Mestrado Profissional, discuta também as implicações práticas dos resultados para a organização ou o setor beneficiado.}
 
-\textcolor{red}{Ao apresentar tabelas e figuras, não se limite a repetir o que já está nesses elementos gráficos. Cuide, isso sim, de destacar o que há de principal informação em uma tabela ou figura, e que o leitor não pode deixar de prestar atenção. Ou ainda, resuma o principal achado referente à tabela ou figura. Sempre adote o seguinte modelo: primeiro apresenta a tabela ou figura {“A Tabela 1 exibe…”}, depois coloque o elemento gráfico e, por fim, comente o que há de principal nele.}
+\textcolor{red}{Lembre-se que discutir um resultado, geralmente, significa: 1. Comparar o seu dado ou resposta com a literatura descrita na seção de Trabalhos Relacionados, apontando se o resultado foi convergente ou divergente com outros dados observados na literatura; 2. Explicar o resultado com base na literatura descrita na seção de Fundamentos Teóricos, o que significa dizer se o resultado era esperado ou não. E, quando isso não for possível, levantar hipóteses que expliquem o resultado; 3. Indicar as implicações do resultado para pesquisas futuras e para a prática profissional; 4. Descrever o que significa o resultado, esclarecendo para o leitor, por exemplo, se o dado é um bom indicador ou não em relação ao que está se tentando responder na pesquisa.}
+
+\textcolor{red}{Ao apresentar tabelas e figuras, não se limite a repetir o que já está nesses elementos gráficos. Destaque a principal informação de uma tabela ou figura, aquela à qual o leitor não pode deixar de prestar atenção, ou resuma o principal achado referente a ela. Sempre adote o seguinte modelo: primeiro apresente a tabela ou figura {“A Tabela 1 exibe…”}, depois coloque o elemento gráfico e, por fim, comente o que há de principal nele.}
+
+
+\subsection{Ameaças à Validade}
+\label{sub:ameacas-validade}
+
+\textcolor{red}{Aponte as limitações do estudo, isto é, os fatores que podem comprometer a confiabilidade e a generalidade das respostas às perguntas de pesquisa, e as estratégias adotadas para mitigá-los. Recomenda-se organizar a discussão em ameaças à validade interna, externa, de construção e de conclusão. Por exemplo: o uso de \textit{benchmarks} públicos pode não representar os programas da organização parceira (validade externa), o que será mitigado pela inclusão de programas reais fornecidos por ela.}
