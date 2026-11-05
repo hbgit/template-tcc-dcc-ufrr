@@ -5,7 +5,7 @@
 \label{sec:solucao-proposta}
 
 
-\todo[inline]{\textbf{NOTA}: Deve-se apresentar a visão geral da solução proposta, nesta seção você deve apresentar metodologia do trabalho ou procedimentos metodológicos – deve constar o instrumental, os métodos e as técnicas aplicados para a elaboração do trabalho.}
+\todo[inline]{\textbf{NOTA}: Nesta seção, apresente a visão geral da solução proposta e os procedimentos metodológicos da pesquisa, com o instrumental, os métodos e as técnicas aplicados. No mestrado, caracterize a pesquisa quanto à natureza (aplicada), à abordagem (quantitativa, qualitativa ou mista), aos objetivos (exploratória, descritiva ou explicativa) e aos procedimentos técnicos (por exemplo, \textit{Design Science Research}, estudo de caso, pesquisa-ação ou experimento controlado), justificando cada escolha. Por se tratar de um Mestrado Profissional em Computação Aplicada, deixe explícito o contexto real de aplicação (organização, setor ou comunidade), os requisitos levantados junto aos usuários ou às partes interessadas e o produto técnico ou tecnológico que resultará da pesquisa. Como se trata do texto de qualificação, indique claramente o que já foi realizado e o que ainda será desenvolvido até a defesa. Caso a pesquisa envolva seres humanos ou dados pessoais, informe a submissão ao Comitê de Ética em Pesquisa (Plataforma Brasil) e as medidas de adequação à LGPD.}
 
 
 %--------------------------------------
@@ -13,9 +13,9 @@
 %--------------------------------------
 \subsection{Arquitetura}
 
-\todo[inline]{\textbf{NOTA}: Deve-se apresentar uma visão geral da solução proposta, exemplo, usando uma Big Picture. Abaixo segue um \textbf{exemplo}.} 
+\todo[inline]{\textbf{NOTA}: Deve-se apresentar uma visão geral da solução proposta, por exemplo, usando uma \textit{Big Picture} que mostre a solução inserida no seu contexto de aplicação, com os usuários, os sistemas externos e os dados envolvidos. Abaixo segue um \textbf{exemplo}.} 
 
-A Figura~\ref{fig_bigpicture} apresenta uma visão geral da solução proposta que visa o desenvolvimento e análise de uma sistema de irrigação usando tecnologias de IoT.
+A Figura~\ref{fig_bigpicture} apresenta uma visão geral da solução proposta que visa o desenvolvimento e análise de um sistema de irrigação usando tecnologias de IoT.
 
 \begin{figure}[h!]    
 	\begin{center}
@@ -24,7 +24,7 @@ A Figura~\ref{fig_bigpicture} apresenta uma visão geral da solução proposta q
 	\caption{\label{fig_bigpicture}Como funciona o sistema de irrigação.}
 \end{figure}
 
-\todo[inline]{\textbf{NOTA}: Nesta seção, também deve-se apresentar o fluxo da sua solução, ou seja, um diagrama contendo os artefatos de entrada e saída para cada etapa da solução proposta. Um modelo de digrama que pode ser utilizado é o BPMN (http://www.bpmn.org). Abaixo segue um \textbf{exemplo}.}
+\todo[inline]{\textbf{NOTA}: Nesta seção, também deve-se apresentar o fluxo da sua solução, ou seja, um diagrama contendo os artefatos de entrada e saída para cada etapa da solução proposta. Um modelo de diagrama que pode ser utilizado é o BPMN (http://www.bpmn.org). Abaixo segue um \textbf{exemplo}.}
 
 A Figura~\ref{fig_digflow} apresenta o fluxo de execução da solução proposta contendo suas respectivas entradas e artefatos gerados no modelo BPMN.
 
@@ -32,7 +32,7 @@ A Figura~\ref{fig_digflow} apresenta o fluxo de execução da solução proposta
 	\begin{center}
 	    \includegraphics[scale=0.7]{imagens/34-final-business-process-diagram.png}
 	\end{center}
-    \caption{\label{fig_digflow}Diagram de fluxo no modelo BPMN.}
+    \caption{\label{fig_digflow}Diagrama de fluxo no modelo BPMN.}
 \end{figure}
 
 
@@ -42,7 +42,7 @@ A Figura~\ref{fig_digflow} apresenta o fluxo de execução da solução proposta
 \subsection{Modelagem e Análise}
 \label{sec:modelagem-analise}
 
-\todo[inline]{Nesta subseção, apresenta-se um panorama da arquitetura da solução, destacando os principais componentes, entidades e interações. Deve-se adotar pelo menos um tipo de modelagem.}
+\todo[inline]{Nesta subseção, apresenta-se um panorama da arquitetura da solução, destacando os principais componentes, entidades e interações. Deve-se adotar pelo menos um tipo de modelagem, escolhido conforme a natureza do problema e justificado no texto. As subseções a seguir (UML, Autômatos Finitos, Redes de Petri e Análise de Corretude) são apenas exemplos: mantenha somente as que se aplicam ao seu trabalho e inclua outras, se necessário (por exemplo, modelagem de dados, arquitetura C4, modelos de aprendizado de máquina).}
 
 \textcolor{red}{Exemplo: A solução proposta é composta por três módulos principais: (i) Interface do Usuário, (ii) Módulo de Processamento de Regras, e (iii) Gerenciador de Requisições. A comunicação entre os módulos é realizada por meio de eventos assíncronos. Para garantir a corretude das interações, utilizou-se modelagem formal com base em UML e Autômatos Finitos.}
 
@@ -87,7 +87,7 @@ Foi verificada a ausência de deadlocks e a reentrância do sistema, assegurando
 %
 Exemplo: A partir do modelo em autômatos, foi possível aplicar a verificação de propriedades de segurança e vivacidade.
 Utilizando a ferramenta NuSMV, especificamos as propriedades desejadas em LTL (Linear Temporal Logic), como: $G(request -> F(response))$ - toda requisição será eventualmente respondida; $G \neg deadlock$ - ausência de deadlock em qualquer execução do sistema.
-Todas as propriedades foram satisfatóriamente verificadas, confirmando a corretude formal da solução.}
+Todas as propriedades foram verificadas satisfatoriamente, confirmando a corretude formal da solução.}
 
 \textcolor{red}{A modelagem revelou potenciais condições de corrida entre os módulos de log e autenticação, levando à introdução de um mecanismo adicional de controle de concorrência.
 A utilização de três diferentes abordagens formais (UML, Autômatos, e Redes de Petri) permitiu uma análise multifacetada do sistema, contemplando tanto aspectos estruturais quanto comportamentais.}
@@ -95,9 +95,12 @@ A utilização de três diferentes abordagens formais (UML, Autômatos, e Redes 
 
 \subsection{Ambiente de Desenvolvimento e Implementação da Solução}
 
-\todo[inline]{\textbf{NOTA}: Deve-se apresentar as ferramentas já pesquisadas que serão adotadas na solução propostas, bem como, explicar como as ferramentas serão correlacionadas. \textbf{Importante}, mencionar o nome da ferramenta, versão e onde pode ser encontrada, segue um pequeno \textbf{exemplo} de uso.}
+\todo[inline]{\textbf{NOTA}: Deve-se apresentar as ferramentas adotadas na solução proposta e explicar como elas se relacionam. \textbf{Importante}: mencione o nome da ferramenta, a versão e onde pode ser encontrada, de modo a garantir a reprodutibilidade. Descreva também o estágio atual da implementação (protótipo, versão funcional, implantação piloto), o repositório do código-fonte e a licença adotada. Segue um pequeno \textbf{exemplo}.}
 
-\textcolor{red}{Exemplo: A solução proposta será uma ferramenta de verificação de código implementada como um transformador de código escrita em C/C++ usando o \textit{framework} para compiladores LLVM~\footnote{https://llvm.org/} (v$6.0$). A solução utilizará como \textit{front-end} para programas escritos em C o Clang~\footnote{https://clang.llvm.org/} (v$6.0$ para gerar código LLVM-bitcode que será usado para a transformação de código. As ferramentas LibFuzzer (v$6.0$) e KLEE (v$2.0$) serão utilizadas para gerar entrada de testes para os códigos que serão analisados. Finalmente, o MetaSMT (v$4.rc2$) será usado como API para motores de solucionadores de satisfabilidade.}
+\textcolor{red}{Exemplo: A solução proposta será uma ferramenta de verificação de código implementada como um transformador de código escrita em C/C++ usando o \textit{framework} para compiladores LLVM~\footnote{https://llvm.org/} (v$6.0$). A solução utilizará como \textit{front-end} para programas escritos em C o Clang~\footnote{https://clang.llvm.org/} (v$6.0$) para gerar código LLVM-bitcode que será usado para a transformação de código. As ferramentas LibFuzzer (v$6.0$) e KLEE (v$2.0$) serão utilizadas para gerar entrada de testes para os códigos que serão analisados. Finalmente, o MetaSMT (v$4.rc2$) será usado como API para motores de resolvedores de satisfatibilidade.}
 
 
+\subsection{Produto Técnico ou Tecnológico}
+\label{sec:produto-tecnico}
 
+\todo[inline]{\textbf{NOTA}: No Mestrado Profissional, a pesquisa deve resultar em um produto técnico ou tecnológico (por exemplo, software ou aplicativo, processo ou tecnologia, base de dados, protocolo, manual ou relatório técnico), que é considerado na avaliação dos programas pela CAPES. Descreva o produto esperado, o seu tipo, o público-alvo ou a organização beneficiada, o grau de inovação e o impacto esperado, bem como a forma de disponibilização e de validação no contexto real de aplicação. Consulte o Regimento Interno do PPCA para verificar as exigências específicas do programa quanto ao produto.}
